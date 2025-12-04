@@ -2,13 +2,15 @@
 import "../styles/global.css";
 import "@fontsource-variable/sora";
 import "@fontsource-variable/manrope";
+
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Sikzyo</title>
     <meta
@@ -19,6 +21,7 @@ import "@fontsource-variable/manrope";
   <body
     class="flex flex-col p-6 bg-linear-to-b from-orange-1 from-50% to-blue-2 bg-fixed gap-8 font-sora items-center md:p-8 md:gap-10"
   >
+    <Header />
     <slot />
   </body>
 </html>
@@ -28,7 +31,7 @@ import "@fontsource-variable/manrope";
   body {
     margin: 0;
     width: 100%;
-    min-width: 100dvh;
+    min-height: 100dvh;
     overscroll-behavior: none;
   }
 </style>
