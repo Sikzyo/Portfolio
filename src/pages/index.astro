@@ -2,4 +2,26 @@
 import Layout from "../layout/Layout.astro";
 ---
 
-<Layout />
+<Layout>
+  <main
+    class="flex flex-col w-full gap-8 pt-[76px] grow md:gap-10 md:pt-[100px]"
+  >
+    <section class="flex flex-col gap-6 w-full md:gap-8">
+      <h1 class="text-2xl font-light md:text-[40px]">
+        ¡Hola, soy <span class="font-manrope font-bold text-orange-9"
+          >Jair Ochoa</span
+        >!
+      </h1>
+      <p class="font-light md:text-2xl">
+        Diseñador y desarrollador web enfocado en crear soluciones digitales
+        efectivas, centradas en la experiencia del usuario.
+      </p>
+      <aside class="flex gap-2 font-light md:text-2xl">
+        <p>Actualmente:</p>
+        <section class="flex gap-2">
+          <span class="font-medium text-orange-9">Freelance</span>
+        </section>
+      </aside>
+    </section>
+  </main>
+</Layout>
