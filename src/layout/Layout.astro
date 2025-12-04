@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import "@fontsource-variable/sora";
+import "@fontsource-variable/manrope";
 ---
 
 <!doctype html>
@@ -14,7 +16,9 @@ import "../styles/global.css";
       content="Portafolio de Jair Ochoa, diseñador interactivo"
     />
   </head>
-  <body>
+  <body
+    class="flex flex-col p-6 bg-linear-to-b from-orange-1 from-50% to-blue-2 bg-fixed gap-8 font-sora items-center md:p-8 md:gap-10"
+  >
     <slot />
   </body>
 </html>

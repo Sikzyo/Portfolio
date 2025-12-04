@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-orange-1: #fefcfb;
+  --color-blue-2: #e6f4fe;
+
+  --font-sora: "Sora Variable", sans-serif;
+  --font-manrope: "Manrope Variable", sans-serif;
+}
