@@ -1,0 +1,70 @@
+---
+import Layout from "../layout/Layout.astro";
+import { Image } from "astro:assets";
+
+import profilePicture from "../assets/images/ProfilePicture.webp";
+import universityPicture from "../assets/images/universityPicture.webp";
+
+import Chip from "../components/Chip.astro";
+---
+
+<Layout>
+  <main
+    class="flex flex-col gap-8 pt-[76px] h-full grow w-full md:gap-10 md:pt-[100px]"
+  >
+    <section
+      class="flex flex-col gap-6 items-center md:flex-row-reverse md:items-start"
+    >
+      <Image
+        src={profilePicture}
+        alt="Imagen de Jair Ochoa"
+        class="rounded-2xl md:max-w-72 lg:max-w-96"
+      />
+      <section class="flex flex-col gap-8">
+        <h1
+          class="font-manrope font-bold text-4xl text-center text-orange-9 md:text-start lg:text-5xl"
+        >
+          Jair Ochoa
+        </h1>
+        <aside class="flex flex-col gap-4 font-light">
+          <p>
+            Hola, ¡Mucho gusto! Mi nombre es Jair Ochoa, diseñador y
+            desarrollador graduado en Diseño Interactivo de la universidad Jorge
+            Tadeo Lozano.
+          </p>
+          <p>
+            Me especializo en planificar, diseñar y ejecutar proyectos de
+            desarrollo web y móvil que resuelven problemáticas específicas. Mi
+            enfoque se centra en entender las necesidades de las personas y,
+            mediante diversas metodologías, generar soluciones funcionales que
+            conecten con ellas.
+          </p>
+        </aside>
+      </section>
+    </section>
+    <section class="flex flex-col gap-4">
+      <h2
+        class="text-2xl text-orange-9 font-bold font-manrope md:text-3xl lg:text-4xl"
+      >
+        Educación
+      </h2>
+      <aside class="flex flex-col gap-4 md:flex-row md:gap-6">
+        <section class="flex flex-col gap-4 md:w2/4">
+          <Image
+            src={universityPicture}
+            alt="juan"
+            class="rounded-2xl w-full max-w-2xl h-auto"
+          />
+          <Chip text={"Plaza principal"} />
+        </section>
+        <section class="flex flex-col gap-2 md:pt-8">
+          <h2 class="font-manrope font-bold text-2xl md:text-3xl">
+            Universidad Jorge Tadeo Lozano.
+          </h2>
+          <p class="font-medium">Facultad de Artes y diseño.</p>
+          <p class="font-light">Diseñador Interactivo.</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+</Layout>
