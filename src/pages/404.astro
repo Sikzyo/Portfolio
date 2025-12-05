@@ -1,0 +1,24 @@
+---
+import Layout from "../layout/Layout.astro";
+
+import Link_break_2 from "../assets/svg/link_break_2.svg";
+---
+
+<Layout>
+  <main
+    class="flex flex-col gap-8 items-center justify-center pt-[76px] h-full grow w-full md:gap-10 md:pt-[100px]"
+  >
+    <Link_break_2 class="w-20 fill-orange-9" />
+    <article class="flex flex-col gap-4 items-center text-center">
+      <p class="font-bold font-manrope text-2xl">Algo salió mal...</p>
+      <p class="font-light">
+        Parece que esta pagina no existe o ha sido movida.
+      </p>
+    </article>
+    <a
+      href="/"
+      class="flex px-4 py-2 bg-orange-9 text-orange-1 font-manrope font-bold rounded-lg"
+      >Volver al inicio</a
+    >
+  </main>
+</Layout>
