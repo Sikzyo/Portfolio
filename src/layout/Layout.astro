@@ -7,6 +7,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
 import { ClientRouter } from "astro:transitions";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -21,6 +22,7 @@ import { ClientRouter } from "astro:transitions";
       content="Portafolio de Jair Ochoa, diseñador interactivo"
     />
     <ClientRouter />
+    <Analytics />
   </head>
   <body
     class="flex flex-col p-6 bg-linear-to-b from-orange-1 from-50% to-blue-2 bg-fixed gap-8 font-sora items-center md:p-8 md:gap-10"
