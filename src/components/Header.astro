@@ -1,5 +1,7 @@
 ---
 import Logo from "@/assets/svg/logo.svg";
+import Navbar from "@/components/Navbar/Navbar.jsx";
+import Hamburger from "@/components/Navbar/Hamburger.jsx";
 ---
 
 <header class="flex justify-between items-center fixed w-full px-6">
@@ -10,4 +12,6 @@ import Logo from "@/assets/svg/logo.svg";
   >
     <Logo class="fill-orange-9 h-6 md:h-7" /></a
   >
+  <Navbar client:load />
+  <Hamburger client:load transition:persist />
 </header>
