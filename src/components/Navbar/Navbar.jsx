@@ -5,7 +5,7 @@ export default function Navbar() {
   const Links = [
     { name: "Inicio", href: "/" },
     { name: "Sobre mí", href: "/about" },
-    { name: "Hoja de vida", href: "/cv" },
+    { name: "Hoja de vida", href: "/cv.pdf" },
   ];
 
   const [page, setPage] = useState(null);
