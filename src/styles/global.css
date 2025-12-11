@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+vercel-analytics {
+  display: none;
+}
+
 @theme {
   --color-orange-1: #fefcfb;
   --color-orange-3: #ffefd6;
