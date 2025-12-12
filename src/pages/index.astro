@@ -1,11 +1,12 @@
 ---
 import Layout from "@/layout/Layout.astro";
+
+import ProjectCard from "@/components/ProjectCard.astro";
+import CloudSun from "@/assetsProjects/weather-app/svg/cloud-sun.svg";
 ---
 
 <Layout>
-  <main
-    class="flex flex-col w-full gap-8 pt-[76px] grow md:gap-10 md:pt-[100px]"
-  >
+  <main class="flex flex-col w-full gap-8 pt-19 grow md:gap-10 md:pt-25">
     <section class="flex flex-col gap-6 w-full md:gap-8">
       <h1 class="text-2xl font-light md:text-[40px]">
         ¡Hola, soy <span class="font-manrope font-bold text-orange-9"
@@ -22,6 +23,18 @@ import Layout from "@/layout/Layout.astro";
           <span class="font-medium text-orange-9">Freelance</span>
         </section>
       </aside>
+    </section>
+    <section class="grid gap-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+      <ProjectCard
+        url="underConstruction"
+        bg1="#FEFCE9"
+        bg2="#E6F4FE"
+        title="Weather App"
+        year="Pronto"
+        description="Descripción del proyecto"
+      >
+        <CloudSun class="h-25 text-[#113264]" />
+      </ProjectCard>
     </section>
   </main>
 </Layout>

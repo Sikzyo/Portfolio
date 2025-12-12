@@ -1,0 +1,30 @@
+---
+import Layout from "@/layout/Layout.astro";
+
+import { RocketIcon } from "@radix-ui/react-icons";
+---
+
+<Layout>
+  <main
+    class="flex flex-col grow items-center justify-center gap-8 pt-19 md:pt-25"
+  >
+    <section
+      class="flex flex-col gap-8 items-center lg:flex-row-reverse lg:gap-20"
+    >
+      <RocketIcon className="text-orange-9 h-20 w-20" />
+      <article class="flex flex-col gap-8 items-center">
+        <section class="flex flex-col gap-4 items-center">
+          <h2 class="font-manrope font-bold text-2xl">
+            🚧 En construcción... 🚧
+          </h2>
+          <p class="text-center font-light">
+            Regresa más tarde para saber más acerca de este proyecto.
+          </p>
+        </section>
+        <a href="/" class="flex py-2 px-4 bg-orange-9 text-orange-1 rounded-lg"
+          >Ver más proyectos</a
+        >
+      </article>
+    </section>
+  </main>
+</Layout>
