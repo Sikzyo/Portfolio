@@ -1,0 +1,20 @@
+---
+import Chip from "./Chip.astro";
+const { url, bg1, bg2, title, year, description } = Astro.props;
+---
+
+<a href={url} class="flex flex-col gap-4 items-center justify-center">
+  <picture
+    class="flex items-center justify-center w-full rounded-2xl aspect-3/2"
+    style={`background: linear-gradient(to bottom left, ${bg1}, ${bg2})`}
+  >
+    <slot />
+  </picture>
+  <section class="flex flex-col gap-2 w-full">
+    <aside class="flex justify-between">
+      <h2 class="font-manrope font-bold text-xl">{title}</h2>
+      <Chip text={year} />
+    </aside>
+    <p class="font-light text-sm">{description}</p>
+  </section>
+</a>
