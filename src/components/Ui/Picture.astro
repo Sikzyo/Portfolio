@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import { undefined } from "astro:schema";
+
+const { src, alt = "", portrait } = Astro.props;
+---
+
+<picture
+  class="flex items-center justify-center w-fit h-full transition duration-300 md:max-w-5/10 hover:scale-105"
+  style={{
+    aspectRatio: portrait ? "9/17" : "3/2",
+    maxHeight: portrait ? "400px" : undefined,
+  }}
+>
+  <Image src={src} alt={alt} class="object-contain rounded-xl" />
+</picture>
