@@ -1,0 +1,45 @@
+---
+const { image, title, description, specSheets } = Astro.props;
+---
+
+<section class="flex flex-col gap-4">
+  <picture
+    class="flex items-center justify-center w-full rounded-2xl aspect-3/2 bg-orange-3/75"
+  ></picture>
+  <article class="flex flex-col gap-4">
+    <section class="flex flex-col gap-2">
+      <h1 class="font-manrope font-semibold text-3xl text-orange-9">
+        {title}
+      </h1>
+      <h2 class="font-light text-2xl">
+        {description}
+      </h2>
+    </section>
+    {
+      specSheets && (
+        <section
+          class="grid gap-2"
+          style={`grid-template-columns: repeat(${specSheets.length}, minmax(0,1fr))`}
+        >
+          {specSheets?.map(
+            (specSheet: { title: string; descriptions: string[] }) => {
+              const { title, descriptions } = specSheet;
+              return (
+                <article class="flex flex-col gap-2">
+                  <span class="font-manrope font-bold text-sm text-orange-9">
+                    {title}
+                  </span>
+                  <section class="flex flex-col break-all">
+                    {descriptions.map((description: string) => (
+                      <p class="font-light">{description}</p>
+                    ))}
+                  </section>
+                </article>
+              );
+            }
+          )}
+        </section>
+      )
+    }
+  </article>
+</section>
