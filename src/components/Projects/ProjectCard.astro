@@ -6,7 +6,7 @@ const { url, bg1, bg2, title, year, description } = Astro.props;
 <a href={url} class="flex flex-col gap-4 items-center justify-center">
   <picture
     class="flex items-center justify-center w-full rounded-2xl aspect-3/2"
-    style={`background: linear-gradient(to bottom left, ${bg1}, ${bg2})`}
+    style={{ background: `linear-gradient(to bottom left, ${bg1}, ${bg2})` }}
   >
     <slot />
   </picture>
