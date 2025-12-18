@@ -2,13 +2,13 @@
 const { image, title, description, specSheets } = Astro.props;
 ---
 
-<section class="flex flex-col gap-4">
+<section class="flex flex-col gap-4 items-center md:flex-row-reverse">
   <picture
-    class="flex items-center justify-center w-full rounded-2xl aspect-3/2 bg-orange-3/75"
+    class="flex items-center justify-center w-full rounded-2xl aspect-3/2 bg-orange-3/75 md:max-w-4/10"
   ></picture>
-  <article class="flex flex-col gap-4">
-    <section class="flex flex-col gap-2">
-      <h1 class="font-manrope font-semibold text-3xl text-orange-9">
+  <article class="flex flex-col gap-4 w-full md:gap-6 lg:gap-8">
+    <section class="flex flex-col gap-2 md:gap-4">
+      <h1 class="font-manrope font-semibold text-3xl text-orange-9 md:text-4xl">
         {title}
       </h1>
       <h2 class="font-light text-2xl">
@@ -18,7 +18,7 @@ const { image, title, description, specSheets } = Astro.props;
     {
       specSheets && (
         <section
-          class="grid gap-2"
+          class="grid gap-2 md:gap-4"
           style={`grid-template-columns: repeat(${specSheets.length}, minmax(0,1fr))`}
         >
           {specSheets?.map(
@@ -26,12 +26,12 @@ const { image, title, description, specSheets } = Astro.props;
               const { title, descriptions } = specSheet;
               return (
                 <article class="flex flex-col gap-2">
-                  <span class="font-manrope font-bold text-sm text-orange-9">
+                  <span class="font-manrope font-bold text-sm text-orange-9 md:text-base">
                     {title}
                   </span>
                   <section class="flex flex-col break-all">
                     {descriptions.map((description: string) => (
-                      <p class="font-light">{description}</p>
+                      <p class="font-light md:text-lg">{description}</p>
                     ))}
                   </section>
                 </article>
