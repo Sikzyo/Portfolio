@@ -1,11 +1,11 @@
 ---
-const { image, title, description, specSheets } = Astro.props;
+import Picture from "@/components/Ui/Picture.astro";
+
+const { picture, title, description, specSheets } = Astro.props;
 ---
 
 <section class="flex flex-col gap-4 items-center md:flex-row-reverse">
-  <picture
-    class="flex items-center justify-center w-full rounded-2xl aspect-3/2 bg-orange-3/75 md:max-w-4/10"
-  ></picture>
+  <Picture src={picture.src} alt={picture.alt} portrait={picture.portrait} />
   <article class="flex flex-col gap-4 w-full md:gap-6 lg:gap-8">
     <section class="flex flex-col gap-2 md:gap-4">
       <h1 class="font-manrope font-semibold text-3xl text-orange-9 md:text-4xl">
@@ -19,7 +19,9 @@ const { image, title, description, specSheets } = Astro.props;
       specSheets && (
         <section
           class="grid gap-2 md:gap-4"
-          style={`grid-template-columns: repeat(${specSheets.length}, minmax(0,1fr))`}
+          style={{
+            gridTemplateColumns: `repeat(${specSheets.length}, minmax(0,1fr))`,
+          }}
         >
           {specSheets?.map(
             (specSheet: { title: string; descriptions: string[] }) => {
