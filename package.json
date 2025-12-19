@@ -2,12 +2,6 @@
   "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@fontsource-variable/manrope": "^5.2.8",
@@ -18,9 +12,20 @@
     "@types/react-dom": "^19.2.3",
     "@vercel/analytics": "^1.6.1",
     "astro": "^5.16.4",
+    "prettier-plugin-astro": "^0.14.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "tailwindcss": "^4.1.17",
     "zustand": "^5.0.9"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
