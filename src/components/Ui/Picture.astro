@@ -6,11 +6,11 @@ const { src, alt = "", portrait } = Astro.props;
 ---
 
 <picture
-  class="flex items-center justify-center w-fit h-full transition duration-300 md:max-w-5/10 hover:scale-105"
+  class="flex h-full w-fit flex-none items-center justify-center p-2 transition duration-300 hover:scale-103 md:max-w-5/11"
   style={{
     aspectRatio: portrait ? "9/17" : "3/2",
     maxHeight: portrait ? "400px" : undefined,
   }}
 >
-  <Image src={src} alt={alt} class="object-contain rounded-xl" />
+  <Image src={src} alt={alt} class="rounded-xl object-contain" />
 </picture>
