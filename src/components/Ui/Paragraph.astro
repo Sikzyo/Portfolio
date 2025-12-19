@@ -1,0 +1,11 @@
+---
+const { paragraphs } = Astro.props;
+---
+
+<article class="flex flex-col gap-5">
+  {
+    paragraphs.map((paragraph: string) => (
+      <p class="font-light md:text-xl">{paragraph}</p>
+    ))
+  }
+</article>
