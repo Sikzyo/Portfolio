@@ -12,5 +12,10 @@ const { src, alt = "", portrait } = Astro.props;
     maxHeight: portrait ? "400px" : undefined,
   }}
 >
-  <Image src={src} alt={alt} class="h-full w-fit rounded-xl object-contain" />
+  <Image
+    src={src}
+    alt={alt}
+    class="h-full rounded-xl object-contain"
+    style={{ width: portrait ? "fit-content" : "100%" }}
+  />
 </picture>
