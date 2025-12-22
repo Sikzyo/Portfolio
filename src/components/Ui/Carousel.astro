@@ -4,7 +4,7 @@ import Picture from "@/components/Ui/Picture.astro";
 const { pictures } = Astro.props;
 ---
 
-<article class="flex items-center gap-1 overflow-x-auto">
+<article class="flex items-center gap-1 overflow-x-auto overflow-y-hidden">
   {
     pictures.map((picture: any) => (
       <Picture
