@@ -1,0 +1,17 @@
+---
+import Picture from "@/components/Ui/Picture.astro";
+
+const { pictures } = Astro.props;
+---
+
+<article class="flex items-center gap-1 overflow-x-auto">
+  {
+    pictures.map((picture: any) => (
+      <Picture
+        src={picture.src}
+        alt={picture.alt}
+        portrait={picture.portrait}
+      />
+    ))
+  }
+</article>
