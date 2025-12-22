@@ -3,18 +3,18 @@ import Chip from "../Ui/Chip.astro";
 const { url, bg1, bg2, title, year, description } = Astro.props;
 ---
 
-<a href={url} class="flex flex-col gap-4 items-center justify-center">
+<a href={url} class="flex flex-col items-center justify-center gap-4">
   <picture
-    class="flex items-center justify-center w-full rounded-2xl aspect-3/2"
+    class="flex aspect-3/2 w-full items-center justify-center rounded-2xl duration-300 hover:scale-103"
     style={{ background: `linear-gradient(to bottom left, ${bg1}, ${bg2})` }}
   >
     <slot />
   </picture>
-  <section class="flex flex-col gap-2 w-full">
+  <section class="flex w-full flex-col gap-2">
     <aside class="flex justify-between">
-      <h2 class="font-manrope font-bold text-xl">{title}</h2>
+      <h2 class="font-manrope text-xl font-bold">{title}</h2>
       <Chip text={year} />
     </aside>
-    <p class="font-light text-sm">{description}</p>
+    <p class="text-sm font-light">{description}</p>
   </section>
 </a>
