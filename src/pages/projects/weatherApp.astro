@@ -1,0 +1,100 @@
+---
+import Layout from "@/layout/Layout.astro";
+import ProjectHero from "@/components/Projects/ProjectHero.astro";
+import ProjectSection from "@/components/Projects/ProjectSection.astro";
+import Paragraph from "@/components/Ui/Paragraph.astro";
+import Carousel from "@/components/Ui/Carousel.astro";
+
+// Images
+import Home from "@/assetsProjects/weather-app/images/HomeIPhone.webp";
+import HomeCity from "@/assetsProjects/weather-app/images/HomeCitysIPhone.webp";
+import Weather from "@/assetsProjects/weather-app/images/WeatherIPhone.webp";
+import HomeLandscape from "@/assetsProjects/weather-app/images/HomeLandscape.webp";
+import WeatherLandscape from "@/assetsProjects/weather-app/images/WeatherLandscape.webp";
+
+type specSheet = {
+  title?: string;
+  descriptions?: string[];
+};
+
+type pictureSetting = {
+  src: ImageMetadata;
+  alt: string;
+  portrait?: boolean;
+};
+
+const specSheets: specSheet[] = [
+  { title: "Rol", descriptions: ["Diseñador", "Desarrollador"] },
+  { title: "Fecha", descriptions: ["--"] },
+  { title: "Equipo", descriptions: ["Jair Ochoa"] },
+];
+
+const pictureCover: pictureSetting = {
+  src: WeatherLandscape,
+  alt: "Imagen del proyecto",
+};
+
+const mockupsImage: pictureSetting[] = [
+  {
+    src: Home,
+    alt: "Imagen de la pantalla principal.",
+    portrait: true,
+  },
+  {
+    src: HomeCity,
+    alt: "Imagen de la pantalla principal con datos ingresados.",
+    portrait: true,
+  },
+  { src: Weather, alt: "Imagen de la pantalla del clima.", portrait: true },
+  {
+    src: HomeLandscape,
+    alt: "Imagen de la pantalla principal en formato Landscape.",
+  },
+  {
+    src: WeatherLandscape,
+    alt: "Imagen de la pantalla del clima en formato Landscape. ",
+  },
+];
+
+const context: string[] = [
+  "Las aplicaciones del clima son herramientas esenciales para planificar nuestro día a día y estar informados sobre el tiempo. Actualmente, las mejores aplicaciones suelen ser de pago o exclusivas de ciertos dispositivos. Las alternativas gratuitas y de código abierto, aunque accesibles para todos, no ofrecen la misma calidad ni experiencia de uso.",
+  "Este proyecto nace para resolver ese problema: crear una aplicación del clima abierta, gratuita y disponible en todas las plataformas, sin sacrificar la calidad ni la facilidad de uso.",
+];
+
+const investing: string[] = [
+  "Existen una gran cantidad de aplicaciones climáticas, los usuarios suelen preferir aquellas que ofrecen resultados más precisos. Valoran principalmente el correcto funcionamiento y la fiabilidad de  los datos. Al mismo tiempo, consideran importante que estas aplicaciones sean fáciles de usar, cuenten con interfaces claras e intuitivas y presenten un estilo visual fácilmente reconocible.",
+];
+
+const problem: string[] = [
+  "Los usuarios necesitan una alternativa fiable y fácil de usar que funcione en cualquier dispositivo para consultar el clima, ya que las opciones existentes no siempre están disponibles o no ofrecen una experiencia de usuario adecuada.",
+];
+
+const mockupsParagraph: string[] = [
+  "Para la aplicación se propone un estilo minimalista que evita elementos complicados o poco intuitivos, permitiendo que el usuario pueda identificar la información más relevante de manera fácil y clara.",
+  "Se estructuró el contenido en dos pantallas para que sea más ordenado: una para buscar y gestionar ciudades guardadas y otra dedicada exclusivamente a la información de la ciudad elegida. ",
+];
+---
+
+<Layout>
+  <main class="flex w-full grow flex-col gap-8 pt-19 md:gap-10 md:pt-25">
+    <ProjectHero
+      title="App del clima"
+      description="Aplicación para consultar el clima en tiempo real."
+      specSheets={specSheets}
+      picture={pictureCover}
+    />
+    <ProjectSection title="Contexto">
+      <Paragraph paragraphs={context} />
+    </ProjectSection>
+    <ProjectSection title="Investigación">
+      <Paragraph paragraphs={investing} />
+    </ProjectSection>
+    <ProjectSection title="Problema">
+      <Paragraph paragraphs={problem} />
+    </ProjectSection>
+    <ProjectSection title="Mockups">
+      <Paragraph paragraphs={mockupsParagraph} />
+      <Carousel pictures={mockupsImage} />
+    </ProjectSection>
+  </main>
+</Layout>
