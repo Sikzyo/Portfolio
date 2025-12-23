@@ -4,6 +4,7 @@ import ProjectHero from "@/components/Projects/ProjectHero.astro";
 import ProjectSection from "@/components/Projects/ProjectSection.astro";
 import Paragraph from "@/components/Ui/Paragraph.astro";
 import Carousel from "@/components/Ui/Carousel.astro";
+import Links from "@/components/Ui/Links.astro";
 
 // Images
 import Home from "@/assetsProjects/weather-app/images/HomeIPhone.webp";
@@ -85,6 +86,14 @@ const mockupsParagraph: string[] = [
     />
     <ProjectSection title="Contexto">
       <Paragraph paragraphs={context} />
+      <p class="font-light md:text-xl">
+        Actualmente el proyecto se está desarrollando para estar disponible en
+        navegadores web. Si te interesa ver el avance , puedes visitar el
+        repositorio en <Links
+          text="GitHub"
+          href="https://github.com/Sikzyo/Weather-app"
+        />.
+      </p>
     </ProjectSection>
     <ProjectSection title="Investigación">
       <Paragraph paragraphs={investing} />
