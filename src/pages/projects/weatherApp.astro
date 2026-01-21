@@ -3,6 +3,8 @@ import Layout from "@/layout/Layout.astro";
 import ProjectHero from "@/components/Projects/ProjectHero.astro";
 import ProjectSection from "@/components/Projects/ProjectSection.astro";
 import Paragraph from "@/components/Ui/Paragraph.astro";
+import RichParagraph from "@/components/Ui/RichParagraph.astro";
+import P from "@/components/Ui/P.astro";
 import Carousel from "@/components/Ui/Carousel.astro";
 import Links from "@/components/Ui/Links.astro";
 
@@ -26,7 +28,7 @@ type pictureSetting = {
 
 const specSheets: specSheet[] = [
   { title: "Rol", descriptions: ["Diseñador", "Desarrollador"] },
-  { title: "Fecha", descriptions: ["--"] },
+  { title: "Fecha", descriptions: ["Ene - 2026"] },
   { title: "Equipo", descriptions: ["Jair Ochoa"] },
 ];
 
@@ -74,6 +76,12 @@ const mockupsParagraph: string[] = [
   "Para la aplicación se propone un estilo minimalista que evita elementos complicados o poco intuitivos, permitiendo que el usuario pueda identificar la información más relevante de manera fácil y clara.",
   "Se estructuró el contenido en dos pantallas para que sea más ordenado: una para buscar y gestionar ciudades guardadas y otra dedicada exclusivamente a la información de la ciudad elegida. ",
 ];
+
+const learningParagraph: string[] = [
+  "Este proyecto me permitió comprender más a fondo cómo se construyen aplicaciones reales y descubrir la variedad de tecnologías que existen para desarrollar soluciones de manera más rápida y eficiente. Aunque enfrenté dificultades al implementar estas tecnologías por ser nuevo en ellas, el acceso a su documentación fue fundamental para poder superarlas. Si bien logré crear un MVP funcional, reconozco que aún no alcanza la visión completa que tenía en mente inicialmente.",
+  "Por esta razón, planeo continuar actualizando el proyecto con nuevas funcionalidades: visualización de datos por periodos de tiempo, consulta de información de días futuros y la incorporación de métricas adicionales. ",
+  "A largo plazo, también pretendo extender esta aplicación a dispositivos móviles y de escritorio utilizando una tecnología multiplataforma, específicamente Kotlin Multiplatform con Compose Multiplatform.",
+];
 ---
 
 <Layout>
@@ -86,12 +94,14 @@ const mockupsParagraph: string[] = [
     />
     <ProjectSection title="Contexto">
       <Paragraph paragraphs={context} />
-      <p class="pt-3 font-light md:pt-2 md:text-xl">
-        La aplicación se encuentra disponible en proddución en: <Links
-          text="Clima"
-          href="https://weather-app-5g0.pages.dev"
-        />.
-      </p>
+      <RichParagraph>
+        <P>
+          La aplicación se encuentra disponible en producción en: <Links
+            text="Clima"
+            href="https://weather-app-5g0.pages.dev"
+          />.
+        </P>
+      </RichParagraph>
     </ProjectSection>
     <ProjectSection title="Investigación">
       <Paragraph paragraphs={investing} />
@@ -104,33 +114,42 @@ const mockupsParagraph: string[] = [
       <Carousel pictures={mockupsImage} />
     </ProjectSection>
     <ProjectSection title="Desarrollo">
-      <p class="pt-3 font-light md:pt-2 md:text-xl">
-        Para la implementación de la aplicación, se optó por desarrollar una
-        aplicación web utilizando React como framework principal. Como base del
-        proyecto, se empleó <Links text="Vite" href="https://vite.dev" /> para la
-        configuración y construcción del entorno de desarrollo. Adicionalmente, se
-        integraron tecnologías complementarias como <Links
-          text="Zustand"
-          href="https://zustand-demo.pmnd.rs"
-        /> para la gestión del estado, <Links
-          text="React Router"
-          href="https://reactrouter.com"
-        /> para el enrutamiento, y <Links
-          text="React Query"
-          href="https://tanstack.com/query/latest"
-        /> para el manejo de las peticiones a la API.
-      </p>
-      <p class="pt-3 font-light md:pt-2 md:text-xl">
-        La elección de estas tecnologías se fundamenta en que representan el
-        estándar actual para el desarrollo de aplicaciones en React modernas,
-        ofreciendo un ecosistema robusto y optimizado. Gracias a esta
-        combinación de herramientas, fue posible materializar exitosamente este
-        proyecto.
-      </p>
-      <p class="pt-3 font-light md:pt-2 md:text-xl">
-        El código completo del proyecto es de acceso público y puede consultarse
-        en <Links text="GitHub" href="https://github.com/Sikzyo/Weather-app" />
-      </p>
+      <RichParagraph>
+        <P>
+          Para la implementación de la aplicación, se optó por desarrollar una
+          aplicación web utilizando React como framework principal. Como base
+          del proyecto, se empleó <Links text="Vite" href="https://vite.dev" /> para
+          la configuración y construcción del entorno de desarrollo. Adicionalmente,
+          se integraron tecnologías complementarias como <Links
+            text="Zustand"
+            href="https://zustand-demo.pmnd.rs"
+          /> para la gestión del estado, <Links
+            text="React Router"
+            href="https://reactrouter.com"
+          /> para el enrutamiento, y <Links
+            text="React Query"
+            href="https://tanstack.com/query/latest"
+          /> para el manejo de las peticiones a la API.
+        </P>
+        <P>
+          La elección de estas tecnologías se fundamenta en que representan el
+          estándar actual para el desarrollo de aplicaciones en React modernas,
+          ofreciendo un ecosistema robusto y optimizado. Gracias a esta
+          combinación de herramientas, fue posible materializar exitosamente
+          este proyecto.
+        </P>
+        <P>
+          El código completo del proyecto es de acceso público y puede
+          consultarse en <Links
+            text="GitHub"
+            href="https://github.com/Sikzyo/Weather-app"
+          />
+        </P>
+      </RichParagraph>
     </ProjectSection>
+    <ProjectSection title="Aprendizajes">
+      <Paragraph paragraphs={learningParagraph} />
+    </ProjectSection>
+    <ProjectSection title="Gracias por leer." />
   </main>
 </Layout>
