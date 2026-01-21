@@ -86,12 +86,10 @@ const mockupsParagraph: string[] = [
     />
     <ProjectSection title="Contexto">
       <Paragraph paragraphs={context} />
-      <p class="font-light md:text-xl">
-        Actualmente el proyecto se está desarrollando para estar disponible en
-        navegadores web. Si te interesa ver el avance , puedes visitar el
-        repositorio en <Links
-          text="GitHub"
-          href="https://github.com/Sikzyo/Weather-app"
+      <p class="pt-3 font-light md:pt-2 md:text-xl">
+        La aplicación se encuentra disponible en proddución en: <Links
+          text="Clima"
+          href="https://weather-app-5g0.pages.dev"
         />.
       </p>
     </ProjectSection>
@@ -104,6 +102,35 @@ const mockupsParagraph: string[] = [
     <ProjectSection title="Mockups">
       <Paragraph paragraphs={mockupsParagraph} />
       <Carousel pictures={mockupsImage} />
+    </ProjectSection>
+    <ProjectSection title="Desarrollo">
+      <p class="pt-3 font-light md:pt-2 md:text-xl">
+        Para la implementación de la aplicación, se optó por desarrollar una
+        aplicación web utilizando React como framework principal. Como base del
+        proyecto, se empleó <Links text="Vite" href="https://vite.dev" /> para la
+        configuración y construcción del entorno de desarrollo. Adicionalmente, se
+        integraron tecnologías complementarias como <Links
+          text="Zustand"
+          href="https://zustand-demo.pmnd.rs"
+        /> para la gestión del estado, <Links
+          text="React Router"
+          href="https://reactrouter.com"
+        /> para el enrutamiento, y <Links
+          text="React Query"
+          href="https://tanstack.com/query/latest"
+        /> para el manejo de las peticiones a la API.
+      </p>
+      <p class="pt-3 font-light md:pt-2 md:text-xl">
+        La elección de estas tecnologías se fundamenta en que representan el
+        estándar actual para el desarrollo de aplicaciones en React modernas,
+        ofreciendo un ecosistema robusto y optimizado. Gracias a esta
+        combinación de herramientas, fue posible materializar exitosamente este
+        proyecto.
+      </p>
+      <p class="pt-3 font-light md:pt-2 md:text-xl">
+        El código completo del proyecto es de acceso público y puede consultarse
+        en <Links text="GitHub" href="https://github.com/Sikzyo/Weather-app" />
+      </p>
     </ProjectSection>
   </main>
 </Layout>
